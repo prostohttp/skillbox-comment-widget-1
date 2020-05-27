@@ -8,10 +8,8 @@ class App extends Component {
 	}
 
 	addComment = (name, date, text) => {
-		const newArr = [...this.state.comments] || [];
-		newArr.push({name, date, text});
 		this.setState({
-			comments: newArr
+			comments: [...this.state.comments || [], {name, date, text}]
 		})
 	}
 
