@@ -9,7 +9,7 @@ class App extends Component {
 
 	addComment = (name, date, text) => {
 		this.setState({
-			comments: [...this.state.comments || [], {name, date, text}]
+			comments: [...this.state.comments, {name, date, text}]
 		})
 	}
 
